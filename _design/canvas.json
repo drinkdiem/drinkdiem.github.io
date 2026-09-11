@@ -1,0 +1,18 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Chosen: Editorial spread" },
+    { "id": "page-2", "name": "Explored directions" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "A · Editorial spread, desktop", "page": "page-1", "x": 0, "y": 0, "w": 1440, "h": 900 },
+    { "file": "MainMobile.dc.html", "title": "A · Editorial spread, mobile", "page": "page-1", "x": 1520, "y": 0, "w": 390, "h": 1200 },
+    { "file": "Horizon.dc.html", "title": "B · Horizon", "page": "page-2", "x": 0, "y": 0, "w": 1440, "h": 900 },
+    { "file": "BrandBook.dc.html", "title": "C · Brand book", "page": "page-2", "x": 0, "y": 1040, "w": 1440, "h": 900 }
+  ],
+  "annotations": [
+    { "id": "note-a", "page": "page-1", "x": -440, "y": 0, "w": 360, "text": "A · Editorial spread (chosen)\n\nNow built into the live site. Keeps the split layout and adds the moodboard's system: sun + wordmark lockup, hairline header and footer, tracked captions, and the portrait layered over the ocean photo.\n\nThe form here shows the recommended Beehiiv styling; the real form is styled in Beehiiv's form editor." },
+    { "id": "note-b", "page": "page-2", "x": -440, "y": 0, "w": 360, "text": "B · Horizon (not chosen)\n\nThe sunrise photo fills the screen and the type sits over it in ivory, with the headline under the real sun. Most immersive; feels like a luxury hotel site.\n\nTradeoff: legibility depends on the photo, and the ivory brand ground mostly disappears." },
+    { "id": "note-c", "page": "page-2", "x": -440, "y": 1040, "w": 360, "text": "C · Brand book (not chosen)\n\nOpens on a huge wordmark with a row of four captioned tiles, like the moodboard itself. Strongest brand presence.\n\nTradeoff: the wordmark competes with the headline, so it reads more like a brand book than a signup page." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

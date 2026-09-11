@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #F4EFE7; -webkit-font-smoothing: antialiased; }
+    a { color: #1E1D1B; text-decoration: none; } a:hover { color: #E57A3C; }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 900px; box-sizing: border-box; padding: 0 48px; background: #F4EFE7; color: #1E1D1B; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; font-weight: 300; display: flex; flex-direction: column; overflow: hidden;">
+
+  <header style="height: 88px; flex: none; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(30, 29, 27, 0.14);">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <svg width="50" height="23" viewBox="0 0 120 56" aria-hidden="true">
+        <defs>
+          <linearGradient id="silver-h" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#E6E3DE"></stop>
+            <stop offset="0.5" stop-color="#A9A59E"></stop>
+            <stop offset="1" stop-color="#5E5A55"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M30 40a30 30 0 0 1 60 0z" fill="url(#silver-h)"></path>
+        <path d="M2 44 Q60 41.6 118 44 Q60 46.4 2 44z" fill="#1E1D1B"></path>
+      </svg>
+      <span style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-weight: 500; font-size: 32px; line-height: 1; letter-spacing: -0.01em;">diem</span>
+    </div>
+    <span style="font-size: 11px; font-weight: 400; letter-spacing: 0.32em; text-transform: uppercase; color: #4F4B46;">Modern energy for a brighter you</span>
+  </header>
+
+  <main style="flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 80px;">
+
+    <div style="display: flex; flex-direction: column; justify-content: center; padding-left: 44px;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 30px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #E57A3C;"></span>
+        <span style="font-size: 11px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: #4F4B46;">Introducing diem</span>
+      </div>
+
+      <h1 style="margin: 0; font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-weight: 400; font-size: 108px; line-height: 0.94; letter-spacing: -0.02em;">Energy for a <em style="font-style: italic;">brighter</em> you.</h1>
+
+      <span style="display: block; width: 40px; height: 1px; background: #E57A3C; margin: 38px 0 24px;"></span>
+
+      <p style="margin: 0; max-width: 30ch; font-size: 19px; line-height: 1.55; letter-spacing: 0.015em; color: #4F4B46;">Clean, sustained energy without the usual trade-offs.</p>
+
+      <div style="display: flex; width: 470px; height: 56px; margin-top: 42px;">
+        <div style="flex: 1; display: flex; align-items: center; padding: 0 20px; background: #FAF7F2; border: 1px solid #D9D3C9; border-right: 0; font-size: 15px; font-weight: 400; letter-spacing: 0.02em; color: #8A857E;">Email address</div>
+        <div style="display: flex; align-items: center; gap: 12px; padding: 0 26px; background: #1E1D1B; color: #F4EFE7; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;">
+          <span>Notify me</span>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="#F4EFE7" stroke-width="1.2" aria-hidden="true"><path d="M0 5h15M11 1l4 4-4 4"></path></svg>
+        </div>
+      </div>
+
+      <p style="margin: 18px 0 0; font-size: 11px; font-weight: 400; letter-spacing: 0.26em; text-transform: uppercase; color: #8A857E;">Launching soon. Be first to know.</p>
+    </div>
+
+    <div style="position: relative; padding: 40px 0;">
+      <div style="position: relative; width: 100%; height: 100%; background: #E6E0D6 url(./ocean.jpg) 32% 38% / cover no-repeat;">
+        <div style="position: absolute; top: 36px; left: 36px; display: flex; flex-direction: column; gap: 18px;">
+          <span style="font-size: 12px; font-weight: 400; line-height: 2; letter-spacing: 0.34em; text-transform: uppercase; color: #1E1D1B; white-space: pre-line;">More
+of what
+matters</span>
+          <span style="width: 24px; height: 1px; background: #1E1D1B;"></span>
+        </div>
+      </div>
+      <div style="position: absolute; left: -118px; bottom: 76px; width: 210px; height: 262px; border: 10px solid #F4EFE7; background: #D9CFC2 url(./portrait.jpg) 62% 30% / cover no-repeat;"></div>
+    </div>
+
+  </main>
+
+  <footer style="height: 72px; flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; border-top: 1px solid rgba(30, 29, 27, 0.14); font-size: 11px; font-weight: 400; letter-spacing: 0.24em; text-transform: uppercase; color: #8A857E;">
+    <span>© 2026 diem</span>
+    <span style="justify-self: center;">Science · Ritual · A brighter tomorrow</span>
+    <span style="justify-self: end;">drinkdiem.com</span>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

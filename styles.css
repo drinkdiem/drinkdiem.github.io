@@ -1,0 +1,382 @@
+/* ==========================================================================
+   diem — coming soon
+   Edit colors and fonts in :root below.
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --ivory:        #F4EFE7;  /* page background */
+  --charcoal:     #1E1D1B;  /* primary text */
+  --ink-soft:     #4F4B46;  /* supporting copy */
+  --muted:        #8A857E;  /* small print */
+  --tangerine:    #E57A3C;  /* restrained accent */
+  --line:         rgba(30, 29, 27, 0.14);
+
+  /* Type */
+  --serif: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing */
+  --gutter: clamp(1.25rem, 3.33vw, 3rem);
+  --col-gap: clamp(3rem, 5.5vw, 5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(229, 122, 60, 0.2);
+}
+
+/* Small tracked capitals used for tagline, eyebrow, captions and footer */
+.label {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* Layout ------------------------------------------------------------------ */
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 5.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.sun {
+  display: block;
+  width: 3.125rem;
+  height: auto;
+}
+
+.sun-disc {
+  animation: rise 2.4s cubic-bezier(0.2, 0.7, 0.1, 1) both;
+}
+
+/* Starts half-risen, so the mark still reads if the animation never runs */
+@keyframes rise {
+  from { transform: translateY(14px); }
+  to   { transform: translateY(0); }
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  color: var(--ink-soft);
+  letter-spacing: 0.32em;
+  text-align: right;
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  column-gap: var(--col-gap);
+}
+
+.hero-copy {
+  align-self: center;
+  padding-block: 3rem;
+  padding-left: clamp(0rem, 3vw, 2.75rem);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.875rem;
+  color: var(--ink-soft);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tangerine);
+}
+
+.headline {
+  max-width: 9em;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(3.625rem, 7.5vw, 6.75rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.headline em {
+  font-style: italic;
+}
+
+.accent-rule {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  margin: 2.375rem 0 1.5rem;
+  background: var(--tangerine);
+}
+
+.lede {
+  max-width: 30ch;
+  color: var(--ink-soft);
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  line-height: 1.55;
+  letter-spacing: 0.015em;
+}
+
+.signup {
+  width: 100%;
+  max-width: 29.375rem;
+  margin-top: 2.625rem;
+}
+
+/* Beehiiv embed: stretch to the column and drop any default chrome */
+.signup iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border: 0;
+  background: transparent;
+}
+
+.note {
+  margin-top: 1.125rem;
+  color: var(--muted);
+  letter-spacing: 0.26em;
+}
+
+/* Shown by script.js if the Beehiiv embed doesn't load.
+   :not([hidden]) (rather than a bare .signup-fallback rule) matters here:
+   the class selector alone ties in specificity with the UA stylesheet's
+   [hidden] { display: none }, and — since author CSS applies after the
+   UA sheet — the tie would go to this rule, defeating `hidden` entirely. */
+.signup-fallback:not([hidden]) {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 1.125rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Photos ------------------------------------------------------------------ */
+
+.hero-visual {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.photo {
+  background-color: #D9CFC2;
+  background-image: var(--image, none);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Layers, top to bottom: photo, then a quiet CSS sunrise that shows only
+   if the photo is missing (sea, sun, sky). */
+.photo-main {
+  position: relative;
+  height: 100%;
+  min-height: 30rem;
+  background-color: #E6E0D6;
+  background-image:
+    var(--image, none),
+    linear-gradient(to bottom, transparent 64%, #D5CEC4 64%, #CBC4BA 100%),
+    radial-gradient(circle at 50% 64%, #F6E3D0 0 11%, transparent 11.2%),
+    linear-gradient(to bottom, #ECE7DF 0%, #EFDFCF 64%);
+  background-size: cover, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 32% 38%, center, center, center;
+}
+
+.photo-caption {
+  position: absolute;
+  top: 2.25rem;
+  left: 2.25rem;
+  font-size: 0.75rem;
+  line-height: 2;
+  letter-spacing: 0.34em;
+}
+
+.photo-caption::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1px;
+  margin-top: 1.125rem;
+  background: currentColor;
+}
+
+/* Portrait layered over the photo's lower-left edge, framed in ivory */
+.photo-inset {
+  position: absolute;
+  left: calc(var(--col-gap) * -1.5);
+  bottom: 4.75rem;
+  width: clamp(9rem, 14.6vw, 13.125rem);
+  aspect-ratio: 4 / 5;
+  border: 10px solid var(--ivory);
+  background-position: 62% 30%;
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  height: 4.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.site-footer .label {
+  letter-spacing: 0.24em;
+}
+
+.motto  { justify-self: center; text-align: center; }
+.domain { justify-self: end; }
+
+/* Mid-size desktops: keep the form clear of the portrait */
+@media (max-width: 1280px) {
+  .signup { max-width: 26rem; }
+}
+
+/* Short desktop screens: tighten so everything fits in one view */
+@media (min-width: 1121px) and (max-height: 800px) {
+  .site-header { height: 4.75rem; }
+  .site-footer { height: 3.75rem; }
+  .hero-copy { padding-block: 1.5rem; }
+  .eyebrow { margin-bottom: 1.25rem; }
+  .headline { font-size: clamp(3.625rem, 6vw, 5.25rem); }
+  .accent-rule { margin: 1.75rem 0 1.25rem; }
+  .signup { margin-top: 2rem; }
+  .hero-visual { padding-block: 1.75rem; }
+  .photo-main { min-height: 0; }
+  .photo-inset { bottom: 3rem; }
+}
+
+/* Tablet & mobile: one column --------------------------------------------- */
+
+@media (max-width: 1120px) {
+  .page {
+    min-height: 0;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-copy {
+    padding: clamp(3.25rem, 9vw, 5rem) 0 0;
+  }
+
+  .hero-visual {
+    margin: clamp(3.5rem, 9vw, 5rem) 0 clamp(4rem, 10vw, 6rem);
+    padding: 0;
+  }
+
+  .photo-main {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    max-height: 44rem;
+    width: 100%;
+  }
+
+  .photo-inset {
+    left: auto;
+    right: clamp(1.125rem, 4vw, 2.5rem);
+    bottom: -2.75rem;
+    width: clamp(8.25rem, 30vw, 13rem);
+    border-width: 8px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "motto motto"
+      "copy  domain";
+    row-gap: 0.875rem;
+    height: auto;
+    padding-block: 1.5rem 2rem;
+  }
+
+  .site-footer > :first-child { grid-area: copy; }
+  .motto  { grid-area: motto; justify-self: start; text-align: left; }
+  .domain { grid-area: domain; }
+}
+
+@media (max-width: 640px) {
+  .site-header { height: 4.25rem; }
+  .sun { width: 2rem; }
+  .brand { gap: 0.625rem; }
+  .wordmark { font-size: 1.6875rem; }
+  .tagline { font-size: 0.625rem; letter-spacing: 0.28em; }
+  .tagline-rest { display: none; }
+
+  .label { font-size: 0.625rem; }
+  .photo-caption { top: 1.5rem; left: 1.5rem; font-size: 0.6875rem; }
+  .lede { max-width: 19.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-disc { animation: none; }
+}
