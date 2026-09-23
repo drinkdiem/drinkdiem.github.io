@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>diem — Energy for a brighter you</title>
-  <meta name="description" content="diem is modern energy for health-conscious professionals. Clean, sustained energy without the usual trade-offs. Launching soon.">
+  <title>diem — Energy without a second thought</title>
+  <meta name="description" content="Clean, balanced energy for demanding days—thoughtfully formulated without the usual trade-offs. Launching soon.">
   <meta name="theme-color" content="#F4EFE7">
   <link rel="canonical" href="https://drinkdiem.com/">
 
   <!-- Link previews (iMessage, Slack, LinkedIn, X) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://drinkdiem.com/">
-  <meta property="og:title" content="diem — Energy for a brighter you">
-  <meta property="og:description" content="Clean, sustained energy without the usual trade-offs. Launching soon.">
+  <meta property="og:title" content="diem — Energy without a second thought">
+  <meta property="og:description" content="Clean, balanced energy for demanding days—thoughtfully formulated without the usual trade-offs. Launching soon.">
   <meta property="og:image" content="https://drinkdiem.com/assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -24,6 +24,21 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "diem",
+      "url": "https://drinkdiem.com/",
+      "sameAs": [
+        "https://www.instagram.com/trydiem",
+        "https://x.com/trydiem",
+        "https://www.facebook.com/drinkdiem/",
+        "https://www.tiktok.com/@trydiem"
+      ]
+    }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -52,16 +67,17 @@
       <p class="label tagline">Modern energy<span class="tagline-rest"> for a brighter day</span></p>
     </header>
 
-    <main class="hero">
+    <main>
+    <div class="hero">
 
       <div class="hero-copy">
-        <p class="label eyebrow">Introducing diem</p>
+        <!-- <p class="label eyebrow">Energy, reconsidered</p> -->
 
-        <h1 class="headline">Energy for a <em>brighter</em> you.</h1>
+        <h1 class="headline">Energy without a <em>second thought.</em></h1>
 
         <span class="accent-rule" aria-hidden="true"></span>
 
-        <p class="lede">Clean, sustained energy without the usual trade-offs.</p>
+        <p class="lede">Clean, balanced focus for the workday—and the life that comes after it.</p>
 
         <div class="signup" id="signup">
           <!-- Beehiiv subscribe form (styled in Beehiiv's form editor) -->
@@ -73,30 +89,86 @@
           <p class="signup-fallback" hidden>Signup is temporarily unavailable. Please check back shortly.</p>
         </div>
 
-        <p class="label note">Launching soon. Be first to know.</p>
+        <nav class="social-links signup-socials" aria-label="Follow diem on social media">
+          <a href="https://www.instagram.com/trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4.25"/>
+              <circle class="social-icon-fill" cx="17.4" cy="6.7" r="1.1"/>
+            </svg>
+          </a>
+          <a href="https://x.com/trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4l14 16M19 4L5 20"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/drinkdiem/" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 21v-8h3l.5-4H14V7.4c0-1.2.4-2.1 2.2-2.1H18V2.1c-.7-.1-1.6-.2-2.7-.2-3.2 0-5.3 1.9-5.3 5.4V9H7v4h3v8"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3v11.1a4.1 4.1 0 1 1-3.4-4V14a1.7 1.7 0 1 0 1 1.6V3h2.4c.4 2.1 1.7 3.4 4 3.8v2.5A7.4 7.4 0 0 1 14 7.8"/>
+            </svg>
+          </a>
+        </nav>
+
+        <p class="label note">Thoughtfully formulated. Launching soon.</p>
       </div>
 
-      <!-- Photos. Swap the files in --image. If one is missing, the page
-           shows a quiet CSS fallback instead of a broken image. -->
+      <!-- Product photo. Swap the file in --image. If it is missing, the
+           page shows a quiet CSS fallback instead of a broken image. -->
       <div class="hero-visual">
         <div class="photo photo-main"
-             style="--image: url('assets/water.jpg')"
+             style="--image: url('diem.png')"
              role="img"
-             aria-label="A glass of water and a smooth stone on sunlit travertine, with the sea and sunset beyond">
-          <p class="label photo-caption">More<br>of what<br>matters</p>
+             aria-label="A pouch of diem modern energy supplement on warm, sunlit stone">
+          <p class="label photo-caption">Clean Energy<br>Clear Focus</p>
         </div>
-        <div class="photo photo-inset"
-             style="--image: url('assets/portrait.jpg')"
-             role="img"
-             aria-label="A woman with her eyes closed, face lifted to the morning sun"></div>
       </div>
 
+    </div>
+
+    <section class="founder-note" aria-label="A note from the Founder">
+      <img class="founder-photo" src="founder.png" alt="Sean, founder of diem" width="1254" height="1254" loading="lazy" decoding="async">
+      <div class="founder-copy">
+        <p class="label founder-eyebrow">A note from the Founder</p>
+        <p class="founder-message">Thanks for being here. I’ll be sharing more behind the scenes as I build diem. Stay tuned.</p>
+        <p class="founder-signature">— Sean</p>
+      </div>
+    </section>
     </main>
 
     <footer class="site-footer">
       <p class="label">&copy; 2026 diem</p>
-      <p class="label motto">Science · Ritual · A brighter tomorrow</p>
-      <p class="label domain">drinkdiem.com</p>
+      <div class="footer-end">
+        <p class="label domain">drinkdiem.com</p>
+        <nav class="social-links" aria-label="Follow diem">
+          <a href="https://www.instagram.com/trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4.25"/>
+              <circle class="social-icon-fill" cx="17.4" cy="6.7" r="1.1"/>
+            </svg>
+          </a>
+          <a href="https://x.com/trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4l14 16M19 4L5 20"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/drinkdiem/" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 21v-8h3l.5-4H14V7.4c0-1.2.4-2.1 2.2-2.1H18V2.1c-.7-.1-1.6-.2-2.7-.2-3.2 0-5.3 1.9-5.3 5.4V9H7v4h3v8"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@trydiem" target="_blank" rel="noopener noreferrer" aria-label="Follow diem on TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3v11.1a4.1 4.1 0 1 1-3.4-4V14a1.7 1.7 0 1 0 1 1.6V3h2.4c.4 2.1 1.7 3.4 4 3.8v2.5A7.4 7.4 0 0 1 14 7.8"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
     </footer>
 
   </div>

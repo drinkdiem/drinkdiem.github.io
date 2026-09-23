@@ -6,8 +6,8 @@ The temporary launch page for **drinkdiem.com**. It's plain HTML and CSS, with o
 index.html           page content
 styles.css           all styling (colors + fonts at the top)
 script.js            shows a fallback message if the Beehiiv form can't load
-assets/water.jpg     main photo (web-optimized from water.png)
-assets/portrait.jpg  layered portrait (from upclose.png)
+diem.png             main product photo
+founder.png          Sean's portrait in the founder note
 assets/og.jpg        1200×630 link-preview image
 _design/             design canvas source files (not published; see below)
 ```
@@ -83,6 +83,6 @@ All paths are relative, so the page also works at a `github.io` project URL befo
 
 The sunrise mark is the inline SVG in the header. Its silver gradient stops are in the `<linearGradient id="silver">` block.
 
-**Photos:** change the paths in the two `style="--image: url('assets/…')"` attributes in `index.html`. The first is the large photo, the second the layered portrait. If a file is missing, that panel shows a quiet CSS fallback, so the page never looks broken.
+**Photo:** change the path in the `style="--image: url('…')"` attribute in `index.html`. The current product photo is `diem.png`. If the file is missing, that panel shows a quiet CSS fallback, so the page never looks broken.
 
 > The original `metal.png`, `moodboard.png`, `ocean.png`, `upclose.png` and `water.png` in the repo root (~8 MB) aren't used by the page directly — they're the source files the `assets/` images were exported from. Move them out of the repo if you want a lighter deploy.
